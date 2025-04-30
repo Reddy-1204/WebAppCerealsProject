@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cereal Data Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Cereal Data Visualization</h1>
+        
+        <div class="controls">
+            <div class="filter-section">
+                <h3>Filter by Manufacturer</h3>
+                <div id="manufacturer-filters"></div>
+                <button id="reset-filters">Reset Filters</button>
+            </div>
+            
+            <div class="attribute-selection">
+                <h3>Scatter Plot Attributes</h3>
+                <div>
+                    <label for="x-attribute">X-Axis:</label>
+                    <select id="x-attribute"></select>
+                </div>
+                <div>
+                    <label for="y-attribute">Y-Axis:</label>
+                    <select id="y-attribute"></select>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart">
+                <h2>Scatter Plot</h2>
+                <div id="scatter-plot"></div>
+            </div>
+            
+            <div class="chart">
+                <h2>Parallel Coordinates</h2>
+                <div id="parallel-plot"></div>
+            </div>
+            
+            <div class="chart">
+                <h2>Manufacturer Averages</h2>
+                <div>
+                    <label for="bar-attribute">Attribute:</label>
+                    <select id="bar-attribute"></select>
+                </div>
+                <div id="bar-chart"></div>
+            </div>
+        </div>
+        
+        <div id="tooltip" class="tooltip"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
